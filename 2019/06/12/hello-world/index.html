@@ -74,7 +74,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.slomoo.cn/2019/06/12/hello-world/" data-id="cjwu4xh0200018sux8u9fmzsi" class="article-share-link">分享</a>
+      <a data-url="http://blog.slomoo.cn/2019/06/12/hello-world/" data-id="cjwubh9790001bouxsw2mha8j" class="article-share-link">分享</a>
       
     </footer>
 
@@ -87,6 +87,26 @@
 
   
     
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'aa70a6221e972c349365',
+      clientSecret: '67e2948a10944a35927069b90e53a9f957d37c95',
+      repo: 'gitalk',
+      owner: 'slomoo',
+      admin: ['slomoo'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
   
 
 </article>
