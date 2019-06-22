@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hello,Pyth]]></title>
+    <url>%2Fd6c50ec3%2F</url>
+    <content type="text"><![CDATA[打卡今天编写第一个Python程序，首先应该知道Python可以是交互式编程（带&gt;&gt;&gt;），也可以是命令行运行.py文件，也就是脚本编程。 基本语法进到Python交互模式，命令行直接python回车： 123456teemitop@DESKTOP-DG4M5KS MINGW64 /d/python$ pythonPython 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)] on win32Type "help", "copyright", "credits" or "license" for more information.&gt;&gt;&gt; 1&gt;&gt;&gt; print("hello,python") 直接输出 1hello,python 上面的是在python交互模式下写的程序，还有一种就是将所写的代码放在python脚本内，然后命令行值行它。建立hello.py文件，将上面的代码保存，然后在命令行值行这个文件。 123teemitop@DESKTOP-DG4M5KS MINGW64 /d/python$ python hello.pyhello,python print() 可以输出任何东西，但如果想要输入，Python提供了一个方法 input(),输入input()并按下回车后，Python交互式命令行就在等待输入了。这时，输入任意字符，然后按回车后完成输入。 123&gt;&gt;&gt; input()test'test' 在Python中，等号=是赋值语句，可以把任意数据类型赋值给变量，同一个变量可以反复赋值，而且可以是不同类型的变量： 123name="zhangsan" #name就是一个字符串sex=18 #sex就是一个整型... 上面的代码为了好理解点，可以将它赋值给一个变量，即： 1234&gt;&gt;&gt; name = input("你叫什么？");print("hello",name) 回车你叫什么？Python输出：hello Python 同样，也可以将代码保存在Python脚本内运行。 总结：Python语法和其他语言都有很多的相似之处，比如变量命名，变量名必须是大小写英文、数字和_的组合，且不能用数字开头 1234Python：name = "xxxxx";PHP: $name = "xxxx";Java: String name="xxxx";.... 最大的区别就是Python的代码不会用{}标识，而是用缩进的方法来规范，而且这个缩进的大小也是相当严谨哦。。]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python学习日记]]></title>
     <url>%2F7c404c2f%2F</url>
     <content type="text"><![CDATA[为什么要学习?听过这么一句话， 比你优秀的人不可怕，可怕的是比你优秀的人比你更努力。对我而言，这句话同样具有很大的杀伤力。因为不进步，就等于落后。 为什么选择python?火。 安装篇我安装的是目前最新版本Python 3.7.3，传送门，选择 Download Windows x86 executable installer大概25M左右。下载好之后就运行文件，需要勾选Add Python 3.7 to PATH，即配置环境变量，忘记勾选的话就需要手动去配置环境变量了，否则，从新安装即可。然后点“Install Now”即可完成安装。我建议在windows装个 git，不然后面用windows的命令提示符操作好变扭，反正我是用不惯。随便创建一个学习python用的文件夹 D:\python，在这个文件夹下面运行 Git Bash，然后运行 python –version 如果能显示python 版本号，即安装成功。 123teemitop@DESKTOP-DG4M5KS MINGW64 /d/python$ python --versionPython 3.7.3 然后在这块儿输出： 123teemitop@DESKTOP-DG4M5KS MINGW64 /d/python$ print("hello py")bash: syntax error near unexpected token `"hello py"' 报错，不能这么执行，原因，我们现在是在git的命令行模式，需要开启python的交互模式，如果在windows命令行： 1234C:\Users\teemitop&gt;pythonPython 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)] on win32Type "help", "copyright", "credits" or "license" for more information.&gt;&gt;&gt; 出现三个大于号，才进入python交互模式，如果用的是Git Bash，必须通过winpty python 或者python -i进入。如果嫌两个命令有点长，繁琐，可以给给它配置个别名：去D:\Program Files\Git\etc，自行查找，找到这个文件** bash.bashrc** 用编辑器打开，在文末加入 alias python=&#39;winpty python &#39;，然后重新打开 Git Bash，直接运行python 即可进入python交互模式 123456teemitop@DESKTOP-DG4M5KS MINGW64 /d/python$ pythonPython 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)] on win32Type "help", "copyright", "credits" or "license" for more information.&gt;&gt;&gt; 退出的时候直接X掉或者exit();后面的括号、分号都不能丢，好严谨哦。。]]></content>
@@ -22,9 +30,9 @@
     <url>%2F4a17b156%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <tags>
+        <tag>Python</tag>
         <tag>Hello</tag>
         <tag>World</tag>
-        <tag>Python</tag>
       </tags>
   </entry>
 </search>
