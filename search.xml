@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python关键字、标识符、变量]]></title>
+    <url>%2F8029f1fe%2F</url>
+    <content type="text"><![CDATA[关键字关键字的含义和其他语言都一样：具有特殊含义的特殊字。在python中，所有的关键字都要区分大小写，这一点真的好严谨哦。。 给test变量赋值一个为真的值： 12345&gt;&gt;&gt; test = True #程序未报错&gt;&gt;&gt; test = true #程序报错Traceback (most recent call last): File "&lt;stdin&gt;", line 1, in &lt;module&gt;NameError: name 'true' is not defined 具体他的关键字都是咋写的，python有这么一个统计，在python交互模式下： 12345678910111213&gt;&gt;&gt; help("keywords")Here is a list of the Python keywords. Enter any keyword to get more help.False class from orNone continue global passTrue def if raiseand del import returnas elif in tryassert else is whileasync except lambda withawait finally nonlocal yieldbreak for not 也可以这样： 12345&gt;&gt;&gt; keyword.kwlist['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'] 如果官方的关键字有变动，去除或者新增，就从新导入即可：&gt;&gt;&gt; import keyword]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello,Pyth]]></title>
     <url>%2Fd6c50ec3%2F</url>
     <content type="text"><![CDATA[打卡今天编写第一个Python程序，首先应该知道Python可以是交互式编程（带&gt;&gt;&gt;），也可以是命令行运行.py文件，也就是脚本编程。 基本语法进到Python交互模式，命令行直接python回车： 123456teemitop@DESKTOP-DG4M5KS MINGW64 /d/python$ pythonPython 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)] on win32Type "help", "copyright", "credits" or "license" for more information.&gt;&gt;&gt; 1&gt;&gt;&gt; print("hello,python") 直接输出 1hello,python 上面的是在python交互模式下写的程序，还有一种就是将所写的代码放在python脚本内，然后命令行值行它。建立hello.py文件，将上面的代码保存，然后在命令行值行这个文件。 123teemitop@DESKTOP-DG4M5KS MINGW64 /d/python$ python hello.pyhello,python print() 可以输出任何东西，但如果想要输入，Python提供了一个方法 input(),输入input()并按下回车后，Python交互式命令行就在等待输入了。这时，输入任意字符，然后按回车后完成输入。 123&gt;&gt;&gt; input()test'test' 在Python中，等号=是赋值语句，可以把任意数据类型赋值给变量，同一个变量可以反复赋值，而且可以是不同类型的变量： 123name="zhangsan" #name就是一个字符串sex=18 #sex就是一个整型... 上面的代码为了好理解点，可以将它赋值给一个变量，即： 1234&gt;&gt;&gt; name = input("你叫什么？");print("hello",name) 回车你叫什么？Python输出：hello Python 同样，也可以将代码保存在Python脚本内运行。 总结：Python语法和其他语言都有很多的相似之处，比如变量命名，变量名必须是大小写英文、数字和_的组合，且不能用数字开头 1234Python：name = "xxxxx";PHP: $name = "xxxx";Java: String name="xxxx";.... 最大的区别就是Python的代码不会用{}标识，而是用缩进的方法来规范，而且这个缩进的大小也是相当严谨哦。。]]></content>
@@ -30,9 +38,9 @@
     <url>%2F4a17b156%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <tags>
-        <tag>Python</tag>
         <tag>Hello</tag>
         <tag>World</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>
