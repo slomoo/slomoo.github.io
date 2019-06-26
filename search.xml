@@ -9,7 +9,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hello,Pyth]]></title>
+    <title><![CDATA[Hello,Python]]></title>
     <url>%2Fd6c50ec3%2F</url>
     <content type="text"><![CDATA[打卡今天编写第一个Python程序，首先应该知道Python可以是交互式编程（带&gt;&gt;&gt;），也可以是命令行运行.py文件，也就是脚本编程。 基本语法进到Python交互模式，命令行直接python回车： 123456teemitop@DESKTOP-DG4M5KS MINGW64 /d/python$ pythonPython 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)] on win32Type "help", "copyright", "credits" or "license" for more information.&gt;&gt;&gt; 1&gt;&gt;&gt; print("hello,python") 直接输出 1hello,python 上面的是在python交互模式下写的程序，还有一种就是将所写的代码放在python脚本内，然后命令行值行它。建立hello.py文件，将上面的代码保存，然后在命令行值行这个文件。 123teemitop@DESKTOP-DG4M5KS MINGW64 /d/python$ python hello.pyhello,python print() 可以输出任何东西，但如果想要输入，Python提供了一个方法 input(),输入input()并按下回车后，Python交互式命令行就在等待输入了。这时，输入任意字符，然后按回车后完成输入。 123&gt;&gt;&gt; input()test'test' 在Python中，等号=是赋值语句，可以把任意数据类型赋值给变量，同一个变量可以反复赋值，而且可以是不同类型的变量： 123name="zhangsan" #name就是一个字符串sex=18 #sex就是一个整型... 上面的代码为了好理解点，可以将它赋值给一个变量，即： 1234&gt;&gt;&gt; name = input("你叫什么？");print("hello",name) 回车你叫什么？Python输出：hello Python 同样，也可以将代码保存在Python脚本内运行。 总结：Python语法和其他语言都有很多的相似之处，比如变量命名，变量名必须是大小写英文、数字和_的组合，且不能用数字开头 1234Python：name = "xxxxx";PHP: $name = "xxxx";Java: String name="xxxx";.... 最大的区别就是Python的代码不会用{}标识，而是用缩进的方法来规范，而且这个缩进的大小也是相当严谨哦。。]]></content>
       <tags>
