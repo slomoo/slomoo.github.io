@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta name="baidu-site-verification" content="kg4AXJSFcC">
+  <meta charset="utf-8">
+  
+  
+    <meta name="keywords" content="西蒙,西蒙子,十年一品温如言,张喜明的博客,开源,PHP,互联网,自媒体,slomo,网站,分享">
+  
+  
+    <meta name="description" content="Slomoo Blogs，是记录博主学习和成长的一个自媒体博客，关注于互联网各种技术应用。将高质量的内容透过人的节点来分享，让大家明白做网站原来如此简单！">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    Python表达式、换行、缩进 |
+    
+    Slomoo Blogs</title>
+  
+    <link rel="shortcut icon" href="//slomoo.oss-cn-beijing.aliyuncs.com/favicon.ico?v%20=%202019062100000">
+  
+  <link rel="stylesheet" href="//slomoo.oss-cn-beijing.aliyuncs.com/css/style.css?v%20=%202019062100000">
+  
+    <link rel="stylesheet" href="//slomoo.oss-cn-beijing.aliyuncs.com/fancybox/jquery.fancybox.min.css?v%20=%202019062100000">
+  
+  <script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/pace.min.js?v%20=%202019062100000"></script>
+  
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?9ce08642bcd8b01c2886f992b5a4096e";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</head>
+</html>
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-Python表达式、换行、缩进" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python表达式、换行、缩进
+    </h1>
+  
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/bbbf860f/" class="article-date">
+  <time datetime="2019-06-27T08:39:19.000Z" itemprop="datePublished">2019-06-27</time>
+</a> 
+        <span class="post-count" style="color:#5c6b72;">全文910个字数</span>
+        <span class="post-count" style="color:#5c6b72;">读完预计3分钟</span>
+        
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+  <div class="article-gallery">
+    <div class="article-gallery-photos">
+      
+        
+          <img src="https://slomoo.oss-cn-beijing.aliyuncs.com/images/keywords.png" itemprop="image">
+        
+      
+    </div>
+  </div>
+
+
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="//slomoo.oss-cn-beijing.aliyuncs.com/assets/css/APlayer.min.css?v%20=%202019062100000"><script src="//slomoo.oss-cn-beijing.aliyuncs.com/assets/js/APlayer.min.js?v%20=%202019062100000" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="//slomoo.oss-cn-beijing.aliyuncs.com/assets/js/Meting.min.js?v%20=%202019062100000"></script><h4 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h4><p>在PHP总的表达式：<strong>几乎所写的任何东西都是一个表达式。简单但却最精确的定义一个表达式的方式就是“任何有值的东西”。</strong><br>也就是说基本上所有元素都可以称为一个表达式了。。<br>而在python中：<strong>可以求出某个值的语法单元。 换句话说，一个表达式就是表达元素例如字面值、名称、属性访问、运算符或函数调用的汇总，它们最终都会返回一个值。 与许多其他语言不同，并非所有语言构件都是表达式。 还存在不能被用作表达式的 statement，例如 while。 赋值也是属于语句而非表达式。</strong></p>
+<a id="more"></a>
+<p>python表达式中的各种元素：</p>
+<ol>
+<li>算术转换、</li>
+<li>原子、原型、</li>
+<li>await表达式、</li>
+<li>幂运算符、</li>
+<li>一元算术和位运算、</li>
+<li>二元元运算符、</li>
+<li>移位运算、</li>
+<li>二元位运算、</li>
+<li>布尔运算、</li>
+<li>条件表达式、</li>
+<li>lambda表达式、</li>
+<li>表达式列表、</li>
+<li>求值顺序、</li>
+<li>运算符优先级</li>
+</ol>
+<p>我的理解：一个表达式就是由各种元素组成，而它们最终都会返回一个值，所以一个值本身也就是一个表达式？有点蒙。。<br>好，在了解下Python表达式张什么样：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">teemitop@DESKTOP-DG4M5KS MINGW64 /d/python</span><br><span class="line">$ python</span><br><span class="line">Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Inte</span><br><span class="line">l)] on win32</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; pow(2,3)   <span class="comment">#函数表达式</span></span><br><span class="line">8</span><br><span class="line">&gt;&gt;&gt; 100+200/100  <span class="comment">#使用算术表达式</span></span><br><span class="line">102.0</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="多行语句换行"><a href="#多行语句换行" class="headerlink" title="多行语句换行"></a>多行语句换行</h4><p>python里面可以用\来将一个集合分割换行。<br>它区分显式行和隐式行</p>
+<h5 id="显式："><a href="#显式：" class="headerlink" title="显式："></a>显式：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = [1,2,3\]      <span class="comment">#不可以在一行完整的表达室内换行</span></span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1</span><br><span class="line">    <span class="built_in">test</span> = [1,2,3\]</span><br><span class="line">                  ^</span><br><span class="line">SyntaxError: unexpected character after line continuation character</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = [1,2,3\    <span class="comment">#不可以将一个元素拆分进行换行</span></span><br><span class="line">... 4\</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 2</span><br><span class="line">    4\</span><br><span class="line">    ^</span><br><span class="line">SyntaxError: invalid syntax</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = [1,2,3\   <span class="comment">#正确示例</span></span><br><span class="line">... ,4\</span><br><span class="line">... ,5,6,\</span><br><span class="line">... 7]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">[1, 2, 3, 4, 5, 6, 7]</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = [<span class="string">'a'</span>,\</span><br><span class="line">... <span class="string">'b'</span>,<span class="string">'c'</span>,\</span><br><span class="line">... <span class="string">'d'</span>,\</span><br><span class="line">... <span class="string">'ef'</span>,<span class="string">'g'</span>]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'ef'</span>, <span class="string">'g'</span>]</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'abc\</span></span><br><span class="line"><span class="string">... ef\</span></span><br><span class="line"><span class="string">... ghijkl\</span></span><br><span class="line"><span class="string">... m'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">abcefghijklm</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="隐式"><a href="#隐式" class="headerlink" title="隐式"></a>隐式</h5><p>用()、[]、{}括起来换行。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = (2+3    <span class="comment">#  test = 2+3-1/2+6</span></span><br><span class="line">... -1</span><br><span class="line">... /2</span><br><span class="line">... +6)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">10.5</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = [<span class="string">'a'</span></span><br><span class="line">... ,<span class="string">'b'</span>,<span class="string">'c'</span>,</span><br><span class="line">... <span class="string">'d'</span></span><br><span class="line">... ,<span class="string">'ef'</span>]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'ef'</span>]</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = &#123;<span class="string">'a'</span></span><br><span class="line">... ,<span class="string">'b'</span></span><br><span class="line">... <span class="string">'c'</span>,<span class="string">'d'</span></span><br><span class="line">... ,<span class="string">'e'</span>,</span><br><span class="line">... <span class="string">'f'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">&#123;<span class="string">'f'</span>, <span class="string">'bc'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>, <span class="string">'a'</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h4><p>前面提过缩进，今天看到了在学一遍把。python编程风格属实和其他语言有所不同，别人都是用{}来把代码圈起来，Python是用缩进的办法来标记代码块，而且缩进的空格数量是4个。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; def test_function():</span><br><span class="line">...     name = input(<span class="string">'同你，你叫啥？'</span>)</span><br><span class="line">...     <span class="keyword">if</span> name == <span class="string">'python'</span>:</span><br><span class="line">...             <span class="built_in">print</span>(<span class="string">'见到你很高兴'</span>,name)</span><br><span class="line">...     <span class="keyword">else</span>:</span><br><span class="line">...             <span class="built_in">print</span>(<span class="string">'见到你好难过'</span>,name)</span><br><span class="line">... test_function()</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 7</span><br><span class="line">    test_function()</span><br><span class="line">                ^</span><br><span class="line">SyntaxError: invalid syntax  <span class="comment">#不知道是交互模式下tab缩进问题还是换行问题，还是其他原因，总之放弃在python交互模式下输出了</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="另外，矫正之前一个错误，退出交互模式exit-即可，不一定加分号。"><a href="#另外，矫正之前一个错误，退出交互模式exit-即可，不一定加分号。" class="headerlink" title="另外，矫正之前一个错误，退出交互模式exit()即可，不一定加分号。"></a>另外，矫正之前一个错误，退出交互模式exit()即可，不一定加分号。</h2><p>好，回到命令行，将上面的代码保存到.py文件，然后运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">teemitop@DESKTOP-DG4M5KS MINGW64 /d/python</span><br><span class="line">$ python hello.py</span><br><span class="line">同学，你叫什么？python</span><br><span class="line">见到你很高心， python</span><br><span class="line"></span><br><span class="line">teemitop@DESKTOP-DG4M5KS MINGW64 /d/python</span><br></pre></td></tr></table></figure>
+
+<p>附上代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">demo_routine</span><span class="params">()</span>:</span></span><br><span class="line">	name = input(<span class="string">'同学，你叫什么？'</span>)</span><br><span class="line">	<span class="keyword">if</span> name==<span class="string">'python'</span>:</span><br><span class="line">		print(<span class="string">'见到你很高心，'</span>,name)</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">demo_routine()</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.slomoo.cn/bbbf860f/" data-id="cjxefl21z000774uxotnbqpku" class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/表达式/">表达式</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+    
+  <nav class="article-nav">
+    
+    
+      <a href="/8029f1fe/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">Python关键字、标识符、变量</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+    
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'aa70a6221e972c349365',
+      clientSecret: '67e2948a10944a35927069b90e53a9f957d37c95',
+      repo: 'gitalk',
+      owner: 'slomoo',
+      admin: ['slomoo'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+  
+
+</article>
+
+
+
+</section>
+  <footer class="footer">
+  
+  <div class="outer">
+    <ul align="center" class="list-inline">
+
+      <li>&copy;  2017- 2019 Slomoo Blogs</li>
+      <li>Author:  <a href="https://blog.slomoo.cn/">张喜明</a></li>
+      <li>Email：slomoo@aliyun.com </li>
+      
+      <br>
+
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+      
+          访问量<span id="busuanzi_value_site_pv"></span>次
+      &nbsp&nbsp&nbsp
+      
+          访问人数<span id="busuanzi_value_site_uv"></span>位
+
+      <br>
+
+      <span id="sitetime"></span>
+      <script language="javascript">
+        function siteTime(){
+          window.setTimeout("siteTime()", 1000);
+          var seconds = 1000;
+          var minutes = seconds * 60;
+          var hours = minutes * 60;
+          var days = hours * 24;
+          var years = days * 365;
+          var today = new Date();
+          var todayYear = today.getFullYear();
+          var todayMonth = today.getMonth()+1;
+          var todayDate = today.getDate();
+          var todayHour = today.getHours();
+          var todayMinute = today.getMinutes();
+          var todaySecond = today.getSeconds();
+          /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+          year - 作为date对象的年份，为4位年份值
+          month - 0-11之间的整数，做为date对象的月份
+          day - 1-31之间的整数，做为date对象的天数
+          hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+          minutes - 0-59之间的整数，做为date对象的分钟数
+          seconds - 0-59之间的整数，做为date对象的秒数
+          microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+          var t1 = Date.UTC(2018,02,13,15,00,00); //北京时间2017-2-13 00:00:00
+          var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+          var diff = t2-t1;
+          var diffYears = Math.floor(diff/years);
+          var diffDays = Math.floor((diff/days)-diffYears*365);
+          var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+          var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+          var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+          document.getElementById("sitetime").innerHTML=" 网站已运行"+diffYears+" 年 "+ diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+        }
+        siteTime();
+      </script>
+
+      <!--
+      <li><a href="/">张喜明</a></li>
+      -->
+    </ul>
+  </div>
+</footer>
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="//slomoo.oss-cn-beijing.aliyuncs.com/images/hexo.svg?v%20=%202019062100000" alt="Slomoo Blogs"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/tags">标签</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">图册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">关注我</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+      <li class="nav-item">
+          <div class="totop" id="totop">
+    <i class="fe fe-rocket"></i>
+</div>
+      </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+
+<style>
+    #aplayer {
+        width: 50%;
+        margin: 0 auto;
+    }
+</style>
+
+<link rel="stylesheet" href="https://slomoo.oss-cn-beijing.aliyuncs.com/assets/css/APlayer.min.css">
+<div id="aplayer"></div>
+<script src="https://slomoo.oss-cn-beijing.aliyuncs.com/assets/js/APlayer.min.js"></script>
+<script>
+const app = new APlayer({
+    container: document.getElementById('aplayer'),
+    mini: false, //迷你模式
+    autoplay: false, //自动播放
+    theme: '#FADFA3', //主题色
+    loop: 'all', //音频循环播放, 可选值: 'all'全部循环, 'one'单曲循环, 'none'不循环
+    order: 'list', //音频循环顺序, 可选值: 'list'列表循环, 'random'随机循环
+    preload: 'auto', //预加载，可选值: 'none', 'metadata', 'auto'
+    volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+    mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+    listFolded: false, //列表默认折叠
+    listMaxHeight: 0, //列表最大高度
+    lrcType: 0, //歌词传递方式
+    fixed: false, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
+    audio: [
+      {
+          name: '打上花火',                          <!-- 歌曲名称-->
+          artist: '米津玄師',                        <!-- 歌曲作者-->
+          url: 'https://slomoo.oss-cn-beijing.aliyuncs.com/videos/%E6%89%93%E4%B8%8A%E8%8A%B1%E7%81%AB.mp3',      <!-- 歌曲路径-->
+          cover: 'https://slomoo.oss-cn-beijing.aliyuncs.com/images/%E6%89%93%E4%B8%8A%E8%8A%B1%E7%81%AB.png',  <!-- 歌曲封面图片-->
+          theme: '#46718b'                        <!-- 选中歌曲的主题-->
+      },
+      {
+          name: 'Lemon',                          <!-- 歌曲名称-->
+          artist: '米津玄師',                        <!-- 歌曲作者-->
+          url: 'https://slomoo.oss-cn-beijing.aliyuncs.com/videos/Lemon.mp3',      <!-- 歌曲路径-->
+          cover: 'https://slomoo.oss-cn-beijing.aliyuncs.com/images/lemon.png',  <!-- 歌曲封面图片-->
+          theme: '#46718b'                        <!-- 选中歌曲的主题-->
+      }
+    ]
+});
+</script>
+</aside>
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/jquery-2.0.3.min.js?v%20=%202019062100000"></script>
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/lazyload.min.js?v%20=%202019062100000"></script>
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/busuanzi-2.3.pure.min.js?v%20=%202019062100000"></script>
+
+
+  <script src="//slomoo.oss-cn-beijing.aliyuncs.com/fancybox/jquery.fancybox.min.js?v%20=%202019062100000"></script>
+
+
+
+  <script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/search.js?v%20=%202019062100000"></script>
+
+
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/ocean.js?v%20=%202019062100000"></script>
+
+</body>
+</html>
