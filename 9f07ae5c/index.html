@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta name="baidu-site-verification" content="kg4AXJSFcC">
+  <meta charset="utf-8">
+  
+  
+    <meta name="keywords" content="西蒙,西蒙子,十年一品温如言,张喜明的博客,开源,PHP,互联网,自媒体,slomo,网站,分享">
+  
+  
+    <meta name="description" content="Slomoo Blogs，是记录博主学习和成长的一个自媒体博客，关注于互联网各种技术应用。将高质量的内容透过人的节点来分享，让大家明白做网站原来如此简单！">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    Python数据类型 |
+    
+    Slomoo Blogs</title>
+  
+    <link rel="shortcut icon" href="//slomoo.oss-cn-beijing.aliyuncs.com/favicon.ico?v%20=%202019062100000">
+  
+  <link rel="stylesheet" href="//slomoo.oss-cn-beijing.aliyuncs.com/css/style.css?v%20=%202019062100000">
+  
+    <link rel="stylesheet" href="//slomoo.oss-cn-beijing.aliyuncs.com/fancybox/jquery.fancybox.min.css?v%20=%202019062100000">
+  
+  <script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/pace.min.js?v%20=%202019062100000"></script>
+  
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?9ce08642bcd8b01c2886f992b5a4096e";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</head>
+</html>
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-Python数据类型" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python数据类型
+    </h1>
+  
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/9f07ae5c/" class="article-date">
+  <time datetime="2019-06-28T07:55:24.000Z" itemprop="datePublished">2019-06-28</time>
+</a> 
+        <span class="post-count" style="color:#5c6b72;">全文2.3k个字数</span>
+        <span class="post-count" style="color:#5c6b72;">读完预计10分钟</span>
+        
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+  <div class="article-gallery">
+    <div class="article-gallery-photos">
+      
+        
+          <img src="https://slomoo.oss-cn-beijing.aliyuncs.com/images/keywords.png" itemprop="image">
+        
+      
+    </div>
+  </div>
+
+
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="//slomoo.oss-cn-beijing.aliyuncs.com/assets/css/APlayer.min.css?v%20=%202019062100000"><script src="//slomoo.oss-cn-beijing.aliyuncs.com/assets/js/APlayer.min.js?v%20=%202019062100000" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="//slomoo.oss-cn-beijing.aliyuncs.com/assets/js/Meting.min.js?v%20=%202019062100000"></script><p>周五了鸭<del>~
+鲁鲁约起来哈</del><br>哈哈哈哈哈哈哈……</p>
+<hr>
+<p>Python数据类型的定义和其他语言都一样，都是来规范一个数据的的上限和下限。<br>不同的是在Python中，是根据语法来断定一个数据的数据类型。。比如用整型就是非十进制的数字，带小数点的就为浮点型，字符串就是用引号括起来的，好像和拍黄片差不多哦。。<br>分别学习一下吧！</p>
+<a id="more"></a>
+<h4 id="布尔型-Booleans"><a href="#布尔型-Booleans" class="headerlink" title="布尔型(Booleans)"></a>布尔型(Booleans)</h4><p>几乎每种语言都有布尔型，也基本都是<code>true、false</code>用法也雷同。真即为<code>True</code>，也可以是1，假即为<code>False</code>同样也可以是0。神奇的是<code>True、False</code>也可以参与运算。。。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test = <span class="literal">True</span>;</span><br><span class="line"><span class="keyword">if</span> test:      <span class="comment"># 也可以 test=True:</span></span><br><span class="line">	print(<span class="string">'结果为真'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">'结果为假'</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">teemitop@DESKTOP-DG4M5KS MINGW64 /d/python</span><br><span class="line">$ python type.py</span><br><span class="line">结果为真</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = 2+True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = 0-True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">-1</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = 1+True-False+1</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>还可以使用type()来确定一个变量或值得数据类型。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = 2+True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = 0-True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">-1</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = 1+True-False+1</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'int'</span>&gt;    <span class="comment">#整型</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'bool'</span>&gt;   <span class="comment">#布尔型</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="数字-Numbers"><a href="#数字-Numbers" class="headerlink" title="数字(Numbers)"></a>数字(Numbers)</h4><p>Pyhton中将整型、浮点型、以及另外一个complex数字类型统称为数字类型。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;class <span class="string">'int'</span>&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = 3</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'int'</span>&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = 3.0</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'float'</span>&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = 3+1J    <span class="comment">#在数字后面加KJ或者小写j就可以让这个变量得数据类型变为complex类型</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'complex'</span>&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(isinstance(<span class="built_in">test</span>,complex))</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>可以用内置<code>isinstance()</code>方法检测对象的数据类型<br>isinstance() 方法的语法:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isinstance(object, <span class="class"><span class="keyword">class</span>)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>object</strong> - 实例对象</li>
+<li><strong>class</strong> - 类名、基本类型等</li>
+</ul>
+<p>object的类型与class的参数类型一致，则返回True，否则返回False。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = 3</span><br><span class="line">&gt;&gt;&gt; isinstance(<span class="built_in">test</span>,int)</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; isinstance(<span class="built_in">test</span>,str)</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>此外，整型是没有大小限制的，浮点型是小数点后面最多跟15位数，这就不试了。</p>
+<h4 id="字符串-Strings"><a href="#字符串-Strings" class="headerlink" title="字符串(Strings)"></a>字符串(Strings)</h4><p>被引号括起来的基本都称为字符串。<br>Python中字符串也可以是多行字符串，类似PHP中的字符串拼接吧</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>test = <span class="string">"""这是一个字符串</span></span><br><span class="line"><span class="string"><span class="meta">... </span>但是，字符串还可以是多行字符串</span></span><br><span class="line"><span class="string"><span class="meta">... </span>还没结束</span></span><br><span class="line"><span class="string"><span class="meta">... </span>"""</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(test)</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">str</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>字符串是不可变的，所以变量在赋值之后，内存将重新分配并使用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>test = <span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(test)</span><br><span class="line"><span class="number">1770939520</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>demo = test</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(demo)</span><br><span class="line"><span class="number">1770939520</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>两个内存地址都为<code>1770939520</code>。</p>
+<h4 id="字节-Bytes"><a href="#字节-Bytes" class="headerlink" title="字节(Bytes)"></a>字节(Bytes)</h4><p>字节是Python中的不可变类型。它可以存储一个字节序列（每个8位），范围从0到255。与数组类似，可以使用下标获取对应的值。<br>字节和字符串的区别：</p>
+<ul>
+<li>字节对象是一个字节序列，而字符串是存储字符序列。</li>
+<li>字节是机器读的，字符串我们可以看得见的。</li>
+<li>字节是存在电脑的磁盘中的，而字符串要写入磁盘需要先编码。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = bytes(16)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'bytes'</span>&gt;   <span class="comment">#字节类型</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">b<span class="string">'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'</span>  <span class="comment">#字节序列</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="列表-Lists"><a href="#列表-Lists" class="headerlink" title="列表(Lists)"></a>列表(Lists)</h4><p>Python列表是一个类似于构造的数组，它以有序的顺序存储任意类型的对象,索引也是和数组一样从0开始。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = [<span class="string">'abc'</span>,123,True,&#123;<span class="string">'a'</span>,<span class="string">'b'</span>&#125;]  <span class="comment">#和php一样啊</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'list'</span>&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[0])   <span class="comment">#这也一样</span></span><br><span class="line">abc</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[2])</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>[2]))</span><br><span class="line">&lt;class <span class="string">'bool'</span>&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>[3]))</span><br><span class="line">&lt;class <span class="string">'set'</span>&gt;</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>列表里面的元素也是可变的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span>[2] = <span class="string">'edf'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">[<span class="string">'abc'</span>, 123, <span class="string">'edf'</span>, &#123;<span class="string">'b'</span>, <span class="string">'a'</span>&#125;]</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>list也可以是多个集合，类似二维数组或者多维。。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = [1,2,3,[2,3,4],[4,5,6]]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">[1, 2, 3, [2, 3, 4], [4, 5, 6]]</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>切片列表，就是列表中提取一个元素或一堆元素。类似截取数组中的元素。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">[1, 2, 3, [2, 3, 4], [4, 5, 6, [7, 8]]]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[0:1])</span><br><span class="line">[1]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[0:4])</span><br><span class="line">[1, 2, 3, [2, 3, 4]]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[1:2])</span><br><span class="line">[2]</span><br></pre></td></tr></table></figure>
+
+<h4 id="元组-Tuples"><a href="#元组-Tuples" class="headerlink" title="元组(Tuples)"></a>元组(Tuples)</h4><p>元组是由逗号分隔的Python对象的异构集合。这意味着不同数据类型的对象可以在元组中共存。元组和列表有些相似。</p>
+<ul>
+<li>两个对象都是有序序列。</li>
+<li>它们可以实现索引和重复。</li>
+<li>允许嵌套。</li>
+<li>他们可以存储不同类型的值。</li>
+</ul>
+<p>元组是用小括号来定义的，其中元素也是用逗号分隔。<br>定义一个空的元组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = ()</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">()</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'tuple'</span>&gt;</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>定义一个多集合的元组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = (1,3,5,7,9)</span><br><span class="line">&gt;&gt;&gt; test1 = (<span class="string">'one'</span>,<span class="string">'two'</span>,<span class="string">'three'</span>,<span class="string">'...'</span>)</span><br><span class="line">&gt;&gt;&gt; merge = (<span class="built_in">test</span>,test1)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(merge)</span><br><span class="line">((1, 3, 5, 7, 9), (<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>, <span class="string">'...'</span>))</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>定义一个重复的元组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span>  = (1,2,3) * 2</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">(1, 2, 3, 1, 2, 3)</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>元组中的切片</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span>  = (1,2,3) * 2</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">(1, 2, 3, 1, 2, 3)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[1:])</span><br><span class="line">(2, 3, 1, 2, 3)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[::-1])</span><br><span class="line">(3, 2, 1, 3, 2, 1)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[:-1])</span><br><span class="line">(1, 2, 3, 1, 2)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[2:3])</span><br><span class="line">(3,)</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>[]里面的参数都是类似数组的下标，从0开始，截取的时候要注意。</p>
+<h5 id="元组与列表的不同"><a href="#元组与列表的不同" class="headerlink" title="元组与列表的不同"></a>元组与列表的不同</h5><p>元组与列表有所不同，因为它们是不可变的。Python不允许在创建元组后对其进行修改。我们以后不能添加或删除任何元素。相反，Python希望我们使用更新的元素序列创建一个新的元素。可变对象除外。</p>
+<h5 id="元组的意义吧"><a href="#元组的意义吧" class="headerlink" title="元组的意义吧"></a>元组的意义吧</h5><ul>
+<li>Python使用元组从函数返回多个值。</li>
+<li>元组比列表更轻量级。</li>
+<li>它作为一个容器来填充多个东西。</li>
+</ul>
+<h4 id="集合-Sets"><a href="#集合-Sets" class="headerlink" title="集合(Sets)"></a>集合(Sets)</h4><p>在所有Python数据类型中，该集合是支持并集，交集，对称差异等数学运算的集合。<br>集合是唯一且不可变对象的无序集合，用花括号{}定义，里面也是由逗号分隔。<br>官方文档说，集合类型比列表具有显着优势。它实现了一种高度优化的方法，用于检查容器是否承载特定元素。这里使用的机制基于称为哈希表的数据结构。没看懂。。</p>
+<h5 id="集合的创建"><a href="#集合的创建" class="headerlink" title="集合的创建"></a>集合的创建</h5><p>需要用内置函数set创建，有点实例化对象的赶脚。。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="built_in">set</span>(<span class="string">'什么是集合？'</span>)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'set'</span>&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">&#123;<span class="string">'合'</span>, <span class="string">'集'</span>, <span class="string">'什'</span>, <span class="string">'？'</span>, <span class="string">'么'</span>, <span class="string">'是'</span>&#125;  <span class="comment">#顺序都乱了？</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = &#123;<span class="string">'集合是什么鬼？'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'set'</span>&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">&#123;<span class="string">'集合是什么鬼？'</span>&#125;</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="冰冻集合"><a href="#冰冻集合" class="headerlink" title="冰冻集合"></a>冰冻集合</h5><p>冰冻集合是不可变的，用frozenset()表示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; frozenset()</span><br><span class="line">frozenset()</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = &#123;<span class="string">'beijing'</span>,<span class="string">'shanghai'</span>,<span class="string">'tianjin'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = frozenset(<span class="built_in">test</span>)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'frozenset'</span>&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">frozenset(&#123;<span class="string">'tianjin'</span>, <span class="string">'beijing'</span>, <span class="string">'shanghai'</span>&#125;)</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>正常集合与冰冻集合的差异</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = &#123;<span class="string">'beijing'</span>,<span class="string">'shanghai'</span>,<span class="string">'tianjin'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">&#123;<span class="string">'tianjin'</span>, <span class="string">'beijing'</span>, <span class="string">'shanghai'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; test.add(<span class="string">'lundun'</span>)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">&#123;<span class="string">'tianjin'</span>, <span class="string">'beijing'</span>, <span class="string">'lundun'</span>, <span class="string">'shanghai'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; demo = frozenset([<span class="string">'beijing'</span>,<span class="string">'shanghai'</span>,<span class="string">'tianjin'</span>])</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(demo)</span><br><span class="line">frozenset(&#123;<span class="string">'tianjin'</span>, <span class="string">'beijing'</span>, <span class="string">'shanghai'</span>&#125;)</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>有点像元组，不能随意增减自身的元素，它内部的集合必须是冻结集合对象。</p>
+<h4 id="字典-Dictionaries"><a href="#字典-Dictionaries" class="headerlink" title="字典(Dictionaries)"></a>字典(Dictionaries)</h4><p>Python中的字典是键值对的无序集合，字典类型解决了有效存储大数据集的问题。</p>
+<h5 id="创建字典"><a href="#创建字典" class="headerlink" title="创建字典"></a>创建字典</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = &#123;<span class="string">'key'</span>:<span class="string">'value'</span>,<span class="string">'name'</span>:<span class="string">'zhangsan'</span>,<span class="string">'sex'</span>:18&#125;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">test</span>))</span><br><span class="line">&lt;class <span class="string">'dict'</span>&gt;</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">&#123;<span class="string">'key'</span>: <span class="string">'value'</span>, <span class="string">'name'</span>: <span class="string">'zhangsan'</span>, <span class="string">'sex'</span>: 18&#125;  <span class="comment">#json的赶脚或者类似php的序列化</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span>[<span class="string">'name'</span>] <span class="comment">#可以利用建来获取对应的值</span></span><br><span class="line"><span class="string">'zhangsan'</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="字典访问元素的方法"><a href="#字典访问元素的方法" class="headerlink" title="字典访问元素的方法"></a>字典访问元素的方法</h5><ul>
+<li>keys（） - 将键值区分，或者叫做获取字典的所有键。</li>
+<li>values（） - 这个和上面相反，获取字典的所有值。</li>
+<li>items（） -以（键，值）对的列表样式返回项目。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; test.keys()</span><br><span class="line">dict_keys([<span class="string">'key'</span>, <span class="string">'name'</span>, <span class="string">'sex'</span>])</span><br><span class="line">&gt;&gt;&gt; test.values()</span><br><span class="line">dict_values([<span class="string">'value'</span>, <span class="string">'zhangsan'</span>, 18])</span><br><span class="line">&gt;&gt;&gt; test.items()</span><br><span class="line">dict_items([(<span class="string">'key'</span>, <span class="string">'value'</span>), (<span class="string">'name'</span>, <span class="string">'zhangsan'</span>), (<span class="string">'sex'</span>, 18)])</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>字典里面的对象是可变的，所以可以变化，这个语法好不习惯。。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span>[<span class="string">'like'</span>] = <span class="string">'english'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">&#123;<span class="string">'key'</span>: <span class="string">'value'</span>, <span class="string">'name'</span>: <span class="string">'zhangsan'</span>, <span class="string">'sex'</span>: 18, <span class="string">'like'</span>: <span class="string">'english'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; test.update(&#123;<span class="string">'name'</span>:<span class="string">'lisi'</span>&#125;)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">&#123;<span class="string">'key'</span>: <span class="string">'value'</span>, <span class="string">'name'</span>: <span class="string">'lisi'</span>, <span class="string">'sex'</span>: 18, <span class="string">'like'</span>: <span class="string">'english'</span>&#125;</span><br><span class="line">&gt;&gt;&gt; del <span class="built_in">test</span>[<span class="string">'key'</span>]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">&#123;<span class="string">'name'</span>: <span class="string">'lisi'</span>, <span class="string">'sex'</span>: 18, <span class="string">'like'</span>: <span class="string">'english'</span>&#125;</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.slomoo.cn/9f07ae5c/" data-id="cjxg0bevw000q48uxglivxdyb" class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据类型/">数据类型</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+    
+  <nav class="article-nav">
+    
+    
+      <a href="/bbbf860f/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">Python表达式、换行、缩进</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+    
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'aa70a6221e972c349365',
+      clientSecret: '67e2948a10944a35927069b90e53a9f957d37c95',
+      repo: 'gitalk',
+      owner: 'slomoo',
+      admin: ['slomoo'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+  
+
+</article>
+
+
+
+</section>
+  <footer class="footer">
+  
+  <div class="outer">
+    <ul align="center" class="list-inline">
+
+      <li>&copy;  2017- 2019 Slomoo Blogs</li>
+      <li>Author:  <a href="https://blog.slomoo.cn/">张喜明</a></li>
+      <li>Email：slomoo@aliyun.com </li>
+      
+      <br>
+
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+      
+          访问量<span id="busuanzi_value_site_pv"></span>次
+      &nbsp&nbsp&nbsp
+      
+          访问人数<span id="busuanzi_value_site_uv"></span>位
+
+      <br>
+
+      <span id="sitetime"></span>
+      <script language="javascript">
+        function siteTime(){
+          window.setTimeout("siteTime()", 1000);
+          var seconds = 1000;
+          var minutes = seconds * 60;
+          var hours = minutes * 60;
+          var days = hours * 24;
+          var years = days * 365;
+          var today = new Date();
+          var todayYear = today.getFullYear();
+          var todayMonth = today.getMonth()+1;
+          var todayDate = today.getDate();
+          var todayHour = today.getHours();
+          var todayMinute = today.getMinutes();
+          var todaySecond = today.getSeconds();
+          /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+          year - 作为date对象的年份，为4位年份值
+          month - 0-11之间的整数，做为date对象的月份
+          day - 1-31之间的整数，做为date对象的天数
+          hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+          minutes - 0-59之间的整数，做为date对象的分钟数
+          seconds - 0-59之间的整数，做为date对象的秒数
+          microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+          var t1 = Date.UTC(2018,02,13,15,00,00); //北京时间2017-2-13 00:00:00
+          var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+          var diff = t2-t1;
+          var diffYears = Math.floor(diff/years);
+          var diffDays = Math.floor((diff/days)-diffYears*365);
+          var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+          var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+          var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+          document.getElementById("sitetime").innerHTML=" 网站已运行"+diffYears+" 年 "+ diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+        }
+        siteTime();
+      </script>
+
+      <!--
+      <li><a href="/">张喜明</a></li>
+      -->
+    </ul>
+  </div>
+</footer>
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="//slomoo.oss-cn-beijing.aliyuncs.com/images/hexo.svg?v%20=%202019062100000" alt="Slomoo Blogs"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/tags">标签</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">图册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">关注我</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+      <li class="nav-item">
+          <div class="totop" id="totop">
+    <i class="fe fe-rocket"></i>
+</div>
+      </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+
+<style>
+    #aplayer {
+        width: 50%;
+        margin: 0 auto;
+    }
+</style>
+
+<link rel="stylesheet" href="https://slomoo.oss-cn-beijing.aliyuncs.com/assets/css/APlayer.min.css">
+<div id="aplayer"></div>
+<script src="https://slomoo.oss-cn-beijing.aliyuncs.com/assets/js/APlayer.min.js"></script>
+<script>
+const app = new APlayer({
+    container: document.getElementById('aplayer'),
+    mini: false, //迷你模式
+    autoplay: false, //自动播放
+    theme: '#FADFA3', //主题色
+    loop: 'all', //音频循环播放, 可选值: 'all'全部循环, 'one'单曲循环, 'none'不循环
+    order: 'list', //音频循环顺序, 可选值: 'list'列表循环, 'random'随机循环
+    preload: 'auto', //预加载，可选值: 'none', 'metadata', 'auto'
+    volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+    mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+    listFolded: false, //列表默认折叠
+    listMaxHeight: 0, //列表最大高度
+    lrcType: 0, //歌词传递方式
+    fixed: false, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
+    audio: [
+      {
+          name: '打上花火',                          <!-- 歌曲名称-->
+          artist: '米津玄師',                        <!-- 歌曲作者-->
+          url: 'https://slomoo.oss-cn-beijing.aliyuncs.com/videos/%E6%89%93%E4%B8%8A%E8%8A%B1%E7%81%AB.mp3',      <!-- 歌曲路径-->
+          cover: 'https://slomoo.oss-cn-beijing.aliyuncs.com/images/%E6%89%93%E4%B8%8A%E8%8A%B1%E7%81%AB.png',  <!-- 歌曲封面图片-->
+          theme: '#46718b'                        <!-- 选中歌曲的主题-->
+      },
+      {
+          name: 'Lemon',                          <!-- 歌曲名称-->
+          artist: '米津玄師',                        <!-- 歌曲作者-->
+          url: 'https://slomoo.oss-cn-beijing.aliyuncs.com/videos/Lemon.mp3',      <!-- 歌曲路径-->
+          cover: 'https://slomoo.oss-cn-beijing.aliyuncs.com/images/lemon.png',  <!-- 歌曲封面图片-->
+          theme: '#46718b'                        <!-- 选中歌曲的主题-->
+      }
+    ]
+});
+</script>
+</aside>
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/jquery-2.0.3.min.js?v%20=%202019062100000"></script>
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/lazyload.min.js?v%20=%202019062100000"></script>
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/busuanzi-2.3.pure.min.js?v%20=%202019062100000"></script>
+
+
+  <script src="//slomoo.oss-cn-beijing.aliyuncs.com/fancybox/jquery.fancybox.min.js?v%20=%202019062100000"></script>
+
+
+
+  <script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/search.js?v%20=%202019062100000"></script>
+
+
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/ocean.js?v%20=%202019062100000"></script>
+
+</body>
+</html>
