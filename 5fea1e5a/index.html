@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta name="baidu-site-verification" content="kg4AXJSFcC">
+  <meta charset="utf-8">
+  
+  
+    <meta name="keywords" content="西蒙,西蒙子,十年一品温如言,张喜明的博客,开源,PHP,互联网,自媒体,slomo,网站,分享">
+  
+  
+    <meta name="description" content="Slomoo Blogs，是记录博主学习和成长的一个自媒体博客，关注于互联网各种技术应用。将高质量的内容透过人的节点来分享，让大家明白做网站原来如此简单！">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    Python字符串 |
+    
+    Slomoo Blogs</title>
+  
+    <link rel="shortcut icon" href="//slomoo.oss-cn-beijing.aliyuncs.com/favicon.ico?v%20=%202019062100000">
+  
+  <link rel="stylesheet" href="//slomoo.oss-cn-beijing.aliyuncs.com/css/style.css?v%20=%202019062100000">
+  
+    <link rel="stylesheet" href="//slomoo.oss-cn-beijing.aliyuncs.com/fancybox/jquery.fancybox.min.css?v%20=%202019062100000">
+  
+  <script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/pace.min.js?v%20=%202019062100000"></script>
+  
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?9ce08642bcd8b01c2886f992b5a4096e";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+</head>
+</html>
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-Python字符串" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python字符串
+    </h1>
+  
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/5fea1e5a/" class="article-date">
+  <time datetime="2019-07-01T08:55:51.000Z" itemprop="datePublished">2019-07-01</time>
+</a> 
+        <span class="post-count" style="color:#5c6b72;">全文2.9k个字数</span>
+        <span class="post-count" style="color:#5c6b72;">读完预计14分钟</span>
+        
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+  <div class="article-gallery">
+    <div class="article-gallery-photos">
+      
+        
+          <img src="https://slomoo.oss-cn-beijing.aliyuncs.com/images/string.png" itemprop="image">
+        
+      
+    </div>
+  </div>
+
+
+      
+        <link rel="stylesheet" class="aplayer-secondary-style-marker" href="//slomoo.oss-cn-beijing.aliyuncs.com/assets/css/APlayer.min.css?v%20=%202019062100000"><script src="//slomoo.oss-cn-beijing.aliyuncs.com/assets/js/APlayer.min.js?v%20=%202019062100000" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="//slomoo.oss-cn-beijing.aliyuncs.com/assets/js/Meting.min.js?v%20=%202019062100000"></script><p>上篇文章粗略的学习了一下Python的数据类型，感觉还是好生疏，所以决定细化学习一哈。。基础打不好，赶脚到后面更懵圈。。。<br>今天的主题就是<strong>字符串</strong>。</p>
+<h4 id="在Python中创建字符串"><a href="#在Python中创建字符串" class="headerlink" title="在Python中创建字符串"></a>在Python中创建字符串</h4><p>字符串的定义：用引号括起来起的字符就是字符串。</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">teemitop@DESKTOP-DG4M5KS MINGW64 /d/python</span><br><span class="line">$ python</span><br><span class="line">Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Inte</span><br><span class="line">l)] on win32</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; str = <span class="string">'hi,python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(str)</span><br><span class="line">hi,python</span><br><span class="line">&gt;&gt;&gt; str = <span class="string">"hi,python"</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(str)</span><br><span class="line">hi,python</span><br><span class="line">&gt;&gt;&gt; str = <span class="string">""</span><span class="string">"hi,python"</span><span class="string">""</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(str)</span><br><span class="line">hi,python</span><br><span class="line">&gt;&gt;&gt; str = <span class="string">""</span><span class="string">"hi,python     #三个引号可以将字符串标记成多行字符串</span></span><br><span class="line"><span class="string">... ,create python str</span></span><br><span class="line"><span class="string">... end"</span><span class="string">""</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(str)</span><br><span class="line">hi,python</span><br><span class="line">,create python str</span><br><span class="line">end</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Python也可以替换字符串<code>replace()</code></p>
+<h5 id="语法：目标字符串-replace-“替换谁”-”替换的新值”"><a href="#语法：目标字符串-replace-“替换谁”-”替换的新值”" class="headerlink" title="语法：目标字符串.replace(“替换谁”,”替换的新值”)"></a>语法：目标字符串.replace(“替换谁”,”替换的新值”)</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(str)</span><br><span class="line">hi,python</span><br><span class="line">,create python str</span><br><span class="line">end</span><br><span class="line">&gt;&gt;&gt; new_str = str.replace(<span class="string">'python'</span>,<span class="string">'php'</span>)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(new_str)</span><br><span class="line">hi,php</span><br><span class="line">,create php str</span><br><span class="line">end</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Python中的索引和分割字符串"><a href="#Python中的索引和分割字符串" class="headerlink" title="Python中的索引和分割字符串"></a>Python中的索引和分割字符串</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'hello,python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[0])</span><br><span class="line">h</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[3])</span><br><span class="line">l</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[-4])</span><br><span class="line">t</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>很有意思，字符串有点像数组的下标，可以根据下标获取某个位置对应的字符串。<br><img src="https://slomoo.oss-cn-beijing.aliyuncs.com/images/string.png" alt></p>
+<p>既然字符串有了下标，那就可以根据下标进行分割字符串，Python中用冒号：来分割字符串。</p>
+<h5 id="语法：字符串-a-b-a-开始位置，b-结束位置"><a href="#语法：字符串-a-b-a-开始位置，b-结束位置" class="headerlink" title="语法：字符串[a:b] a:开始位置，b:结束位置"></a>语法：字符串[a:b] a:开始位置，b:结束位置</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'hello,python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[0:1])</span><br><span class="line">h</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[0:5])</span><br><span class="line">hello</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[0:02])</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">test</span>[0:02])</span><br><span class="line">                  ^</span><br><span class="line">SyntaxError: invalid token</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[0:-2])</span><br><span class="line">hello,pyth</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[2:-2])</span><br><span class="line">llo,pyth</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>[2:2])</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Python中修改-删除字符串"><a href="#Python中修改-删除字符串" class="headerlink" title="Python中修改/删除字符串"></a>Python中修改/删除字符串</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'hello,python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span>[1] = <span class="string">'xxx'</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: <span class="string">'str'</span> object does not support item assignment</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">hello,python</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'hello,php'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">hello,php</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>从上面的错误提示看出，对象不支持分配，但是可以覆盖一个新的字符串。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">hello,php</span><br><span class="line">&gt;&gt;&gt; del <span class="built_in">test</span>[1]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: <span class="string">'str'</span> object doesn<span class="string">'t support item deletion</span></span><br><span class="line"><span class="string">&gt;&gt;&gt; del test</span></span><br><span class="line"><span class="string">&gt;&gt;&gt; print(test)</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span></span><br><span class="line"><span class="string">NameError: name '</span><span class="built_in">test</span><span class="string">' is not defined</span></span><br><span class="line"><span class="string">&gt;&gt;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>同样，也不能根据下标删除字符串中的某个字符，但是他可以销毁一个字符串变量。</p>
+<h4 id="Python中的字符串运算符"><a href="#Python中的字符串运算符" class="headerlink" title="Python中的字符串运算符"></a>Python中的字符串运算符</h4><p>加号: 字符串拼接，和js一样。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'hello'</span></span><br><span class="line">&gt;&gt;&gt; test1 = <span class="string">' python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>+test1)</span><br><span class="line">hello python</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>乘号 ：字符串重复赋值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">"x"</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>*2)</span><br><span class="line">xx</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>in：如果指定字符出现在某个字符串内，则返回True，否则返回False。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'abcdef'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">'a'</span> <span class="keyword">in</span> <span class="built_in">test</span>)</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">'g'</span> <span class="keyword">in</span> <span class="built_in">test</span>)</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>not in: 和上面相反。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'abcdef'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">'g'</span> not <span class="keyword">in</span> <span class="built_in">test</span>)</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">'a'</span> not <span class="keyword">in</span> <span class="built_in">test</span>)</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>for：遍历字符串。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'abcdef'</span></span><br><span class="line">&gt;&gt;&gt; <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">test</span>: <span class="built_in">print</span> (i, end =<span class="string">"\n"</span>)</span><br><span class="line">...</span><br><span class="line">a</span><br><span class="line">b</span><br><span class="line">c</span><br><span class="line">d</span><br><span class="line">e</span><br><span class="line">f</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>字符串的转义可以用r或者R。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">'\n'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(r<span class="string">'\n'</span>)</span><br><span class="line">\n</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(R<span class="string">'\n'</span>)</span><br><span class="line">\n</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="python中的字符串转义"><a href="#python中的字符串转义" class="headerlink" title="python中的字符串转义"></a>python中的字符串转义</h4><p>其实就是字符串的转义，为什么要转义，在平时的编码中有时候代码中必须要出现特定的运算符，但是在代码编译的时候，他把这个运算符当作了程序中的一部分来值行，导致程序报错，或者未达到预期想要的结果。。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">"abcdef"</span>abc is a string<span class="string">""</span></span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1</span><br><span class="line">    <span class="built_in">test</span> = <span class="string">"abcdef"</span>abc is a string<span class="string">""</span></span><br><span class="line">                     ^</span><br><span class="line">SyntaxError: invalid syntax</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">"abcdef\"abc is a string\""</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">abcdef<span class="string">"abc is a string"</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="转义符列表"><a href="#转义符列表" class="headerlink" title="转义符列表"></a>转义符列表</h5><p><img src="https://slomoo.oss-cn-beijing.aliyuncs.com/images/char.png" alt></p>
+<h4 id="字符串的格式化"><a href="#字符串的格式化" class="headerlink" title="字符串的格式化"></a>字符串的格式化</h4><p>为了能格式化字符串，利用“%”来格式化，这个貌似都是通用的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(&apos;name:%s\nversion:%s&apos;%(&apos;python&apos;,&apos;3.7.3&apos;))</span><br><span class="line">name:python</span><br><span class="line">version:3.7.3</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="格式符号列表"><a href="#格式符号列表" class="headerlink" title="格式符号列表"></a>格式符号列表</h5><p><img src="https://slomoo.oss-cn-beijing.aliyuncs.com/images/format.png" alt></p>
+<h4 id="Python内置字符串函数"><a href="#Python内置字符串函数" class="headerlink" title="Python内置字符串函数"></a>Python内置字符串函数</h4><h5 id="1、capitalize-返回首字符大写的字符串，小写的其余字符。"><a href="#1、capitalize-返回首字符大写的字符串，小写的其余字符。" class="headerlink" title="1、capitalize() 返回首字符大写的字符串，小写的其余字符。"></a>1、capitalize() 返回首字符大写的字符串，小写的其余字符。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'abcd'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.capitalize())</span><br><span class="line">Abcd</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、lower-将所有字符串转为小写。"><a href="#2、lower-将所有字符串转为小写。" class="headerlink" title="2、lower() 将所有字符串转为小写。"></a>2、lower() 将所有字符串转为小写。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'AbcdEFG'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.lower())</span><br><span class="line">abcdefg</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、upper-将所有字符转为大写。"><a href="#3、upper-将所有字符转为大写。" class="headerlink" title="3、upper() 将所有字符转为大写。"></a>3、upper() 将所有字符转为大写。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'AbcdEFG'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.upper())</span><br><span class="line">ABCDEFG</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4、swapcase-将字符串中的大小写互转-大-gt-小-、-小-gt-大"><a href="#4、swapcase-将字符串中的大小写互转-大-gt-小-、-小-gt-大" class="headerlink" title="4、swapcase() 将字符串中的大小写互转  大-&gt;小 、 小-&gt;大"></a>4、swapcase() 将字符串中的大小写互转  大-&gt;小 、 小-&gt;大</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'AbcdEFG'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.swapcase())</span><br><span class="line">aBCDefg</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="5、title-将每个单词的首字母大写。"><a href="#5、title-将每个单词的首字母大写。" class="headerlink" title="5、title() 将每个单词的首字母大写。"></a>5、title() 将每个单词的首字母大写。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'AbcdEFG opp'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.title())</span><br><span class="line">Abcdefg Opp</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="6、count-str-beg-end-统计某个字符在字符串中出现的次数，区分大小写，可限制范围。"><a href="#6、count-str-beg-end-统计某个字符在字符串中出现的次数，区分大小写，可限制范围。" class="headerlink" title="6、count(str[, beg [, end]]) 统计某个字符在字符串中出现的次数，区分大小写，可限制范围。"></a>6、count(str[, beg [, end]]) 统计某个字符在字符串中出现的次数，区分大小写，可限制范围。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'AbcdEFG opp'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.count(<span class="string">'a'</span>))</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.count(<span class="string">'A'</span>))</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.count(<span class="string">'A'</span>,0,2))</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'AbcAAdEFG opp'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.count(<span class="string">'A'</span>,0,2))</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.count(<span class="string">'A'</span>,0,3))</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.count(<span class="string">'A'</span>,0,6))</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.count(<span class="string">'A'</span>,0,4))</span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="7、islower-如果字符串中都是小写返回True-否则返回False。"><a href="#7、islower-如果字符串中都是小写返回True-否则返回False。" class="headerlink" title="7、islower() 如果字符串中都是小写返回True,否则返回False。"></a>7、islower() 如果字符串中都是小写返回True,否则返回False。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'AbcAAdEFG opp'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.islower())</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'opp'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.islower())</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="8、isupper-如果字符串中都是大写返回True-否则返回False。"><a href="#8、isupper-如果字符串中都是大写返回True-否则返回False。" class="headerlink" title="8、isupper() 如果字符串中都是大写返回True,否则返回False。"></a>8、isupper() 如果字符串中都是大写返回True,否则返回False。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'AbcAAdEFG opp'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isupper())</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'OOP'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isupper())</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="9、isdecimal-如果所有字符都是十进制，则返回True-否则返回False。"><a href="#9、isdecimal-如果所有字符都是十进制，则返回True-否则返回False。" class="headerlink" title="9、isdecimal() 如果所有字符都是十进制，则返回True,否则返回False。"></a>9、isdecimal() 如果所有字符都是十进制，则返回True,否则返回False。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = u<span class="string">'xx'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isdecimal())</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = 2019</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isdecimal())</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">AttributeError: <span class="string">'int'</span> object has no attribute <span class="string">'isdecimal'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'2019'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isdecimal())</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="10、isdigit-如果字符串内只有数字返回True-反则返回False。"><a href="#10、isdigit-如果字符串内只有数字返回True-反则返回False。" class="headerlink" title="10、isdigit() 如果字符串内只有数字返回True,反则返回False。"></a>10、isdigit() 如果字符串内只有数字返回True,反则返回False。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'2019'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isdigit())</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'2019年了啊'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isdigit())</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="11、isnumeric-如果字符串内只有数字返回True-反则返回False-只针对unicode对象上。"><a href="#11、isnumeric-如果字符串内只有数字返回True-反则返回False-只针对unicode对象上。" class="headerlink" title="11、isnumeric() 如果字符串内只有数字返回True,反则返回False 只针对unicode对象上。"></a>11、isnumeric() 如果字符串内只有数字返回True,反则返回False 只针对unicode对象上。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'2019'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isnumeric())</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = u<span class="string">'2019'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isnumeric())</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = u<span class="string">'2019年了啊'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isnumeric())</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="12、isalpha-如果一个非空字符串只包含字母返回True-否则返回False。"><a href="#12、isalpha-如果一个非空字符串只包含字母返回True-否则返回False。" class="headerlink" title="12、isalpha() 如果一个非空字符串只包含字母返回True,否则返回False。"></a>12、isalpha() 如果一个非空字符串只包含字母返回True,否则返回False。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isalpha())</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">''</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isalpha())</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python3.7.3'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isalpha())</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="13、isalnum-如果一个非空字符串只包含十进制数字或者字母返回True-否则返回False。"><a href="#13、isalnum-如果一个非空字符串只包含十进制数字或者字母返回True-否则返回False。" class="headerlink" title="13、isalnum() 如果一个非空字符串只包含十进制数字或者字母返回True,否则返回False。"></a>13、isalnum() 如果一个非空字符串只包含十进制数字或者字母返回True,否则返回False。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isalnum())</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python3'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isalnum())</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python3.7.3'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.isalnum())</span><br><span class="line">False</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="14、rjust-返回一个补充过的字符串，右对齐，第一个参数是新字符串的长度，第二个参数是用什么补全剩余字符串，默认位空格。"><a href="#14、rjust-返回一个补充过的字符串，右对齐，第一个参数是新字符串的长度，第二个参数是用什么补全剩余字符串，默认位空格。" class="headerlink" title="14、rjust() 返回一个补充过的字符串，右对齐，第一个参数是新字符串的长度，第二个参数是用什么补全剩余字符串，默认位空格。"></a>14、rjust() 返回一个补充过的字符串，右对齐，第一个参数是新字符串的长度，第二个参数是用什么补全剩余字符串，默认位空格。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">python</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rjust(10,<span class="string">'a'</span>))</span><br><span class="line">aaaapython</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rjust(10,<span class="string">'-'</span>))</span><br><span class="line">----python</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="15、ljust-和一样，顺序相反。"><a href="#15、ljust-和一样，顺序相反。" class="headerlink" title="15、ljust() 和一样，顺序相反。"></a>15、ljust() 和一样，顺序相反。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">python</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.ljust(10,<span class="string">'a'</span>))</span><br><span class="line">pythonaaaa</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.ljust(10,<span class="string">'-'</span>))</span><br><span class="line">python----</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="16、center-和上面一样，只不过将原始字符串居中，从两边进行补全，奇数时优先左边补全。"><a href="#16、center-和上面一样，只不过将原始字符串居中，从两边进行补全，奇数时优先左边补全。" class="headerlink" title="16、center() 和上面一样，只不过将原始字符串居中，从两边进行补全，奇数时优先左边补全。"></a>16、center() 和上面一样，只不过将原始字符串居中，从两边进行补全，奇数时优先左边补全。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">python</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.center(10,<span class="string">'-'</span>))</span><br><span class="line">--python--</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.center(10,<span class="string">'a'</span>))</span><br><span class="line">aapythonaa</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.center(11,<span class="string">'a'</span>))</span><br><span class="line">aaapythonaa</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="17、zfill-也是补全，只不过用0代替。注：如果字符串前面存在特殊字符，则从特殊字符前面补齐。"><a href="#17、zfill-也是补全，只不过用0代替。注：如果字符串前面存在特殊字符，则从特殊字符前面补齐。" class="headerlink" title="17、zfill() 也是补全，只不过用0代替。注：如果字符串前面存在特殊字符，则从特殊字符前面补齐。"></a>17、zfill() 也是补全，只不过用0代替。注：如果字符串前面存在特殊字符，则从特殊字符前面补齐。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">python</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.zfill(10))</span><br><span class="line">0000python</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'/python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.zfill(10))</span><br><span class="line">000/python</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'*python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.zfill(10))</span><br><span class="line">000*python</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'#python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.zfill(10))</span><br><span class="line">000<span class="comment">#python</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="18、find-str-，i-，j-查找字符串，从i开始，到j结束，返回该字符串的下标，如果未找到则返回-1。"><a href="#18、find-str-，i-，j-查找字符串，从i开始，到j结束，返回该字符串的下标，如果未找到则返回-1。" class="headerlink" title="18、find(str [，i [，j]]) 查找字符串，从i开始，到j结束，返回该字符串的下标，如果未找到则返回-1。"></a>18、find(str [，i [，j]]) 查找字符串，从i开始，到j结束，返回该字符串的下标，如果未找到则返回-1。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">python</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.find(<span class="string">'t'</span>))</span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.find(<span class="string">'t'</span>,2,4))</span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.find(<span class="string">'t'</span>,3,4))</span><br><span class="line">-1</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="19、index-str-i-j-与find-相同，唯一区别，如果未查找到指定的字符串就会报错。"><a href="#19、index-str-i-j-与find-相同，唯一区别，如果未查找到指定的字符串就会报错。" class="headerlink" title="19、index(str[,i [,j]]) 与find()相同，唯一区别，如果未查找到指定的字符串就会报错。"></a>19、index(str[,i [,j]]) 与find()相同，唯一区别，如果未查找到指定的字符串就会报错。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.index(<span class="string">'p'</span>))</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.index(<span class="string">'p'</span>,1,3))</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">ValueError: substring not found</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.index(<span class="string">'p'</span>,0,3))</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="20、rfind-str-i-j-与find-相同-只是返回找到子字符串的最后一个索引。"><a href="#20、rfind-str-i-j-与find-相同-只是返回找到子字符串的最后一个索引。" class="headerlink" title="20、rfind(str[,i [,j]]) 与find()相同,只是返回找到子字符串的最后一个索引。"></a>20、rfind(str[,i [,j]]) 与find()相同,只是返回找到子字符串的最后一个索引。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rfind(<span class="string">'t'</span>,0,10))</span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rfind(<span class="string">'t'</span>,10))</span><br><span class="line">-1</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="21、split-sep-maxsplit-将字符串分割成列表，默认分隔符未空格。"><a href="#21、split-sep-maxsplit-将字符串分割成列表，默认分隔符未空格。" class="headerlink" title="21、split([sep[,maxsplit]]) 将字符串分割成列表，默认分隔符未空格。"></a>21、split([sep[,maxsplit]]) 将字符串分割成列表，默认分隔符未空格。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python is a good language'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.split())</span><br><span class="line">[<span class="string">'python'</span>, <span class="string">'is'</span>, <span class="string">'a'</span>, <span class="string">'good'</span>, <span class="string">'language'</span>]</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="22、splitlines-num-将字符串分割成列表，是从换行符出现的位置进行分割，如果num存在，则在列表中存在换行符。"><a href="#22、splitlines-num-将字符串分割成列表，是从换行符出现的位置进行分割，如果num存在，则在列表中存在换行符。" class="headerlink" title="22、splitlines(num) 将字符串分割成列表，是从换行符出现的位置进行分割，如果num存在，则在列表中存在换行符。"></a>22、splitlines(num) 将字符串分割成列表，是从换行符出现的位置进行分割，如果num存在，则在列表中存在换行符。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python is\n a good\n language'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">python is</span><br><span class="line"> a good</span><br><span class="line"> language</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.splitlines())</span><br><span class="line">[<span class="string">'python is'</span>, <span class="string">' a good'</span>, <span class="string">' language'</span>]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.splitlines(1))</span><br><span class="line">[<span class="string">'python is\n'</span>, <span class="string">' a good\n'</span>, <span class="string">' language'</span>]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.splitlines(2))</span><br><span class="line">[<span class="string">'python is\n'</span>, <span class="string">' a good\n'</span>, <span class="string">' language'</span>]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.splitlines(-1))</span><br><span class="line">[<span class="string">'python is\n'</span>, <span class="string">' a good\n'</span>, <span class="string">' language'</span>]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.splitlines(0))</span><br><span class="line">[<span class="string">'python is'</span>, <span class="string">' a good'</span>, <span class="string">' language'</span>]</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="23、join-seq-字符串连接。"><a href="#23、join-seq-字符串连接。" class="headerlink" title="23、join(seq) 字符串连接。"></a>23、join(seq) 字符串连接。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python is\n a good\n language'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="string">'-'</span>.join(<span class="built_in">test</span>))</span><br><span class="line">p-y-t-h-o-n- -i<span class="_">-s</span>-</span><br><span class="line">- -a- -g-o-o<span class="_">-d</span>-</span><br><span class="line">- -l<span class="_">-a</span>-n-g-u<span class="_">-a</span>-g<span class="_">-e</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="24、lstrip-chars-删除指定的字符（只能是开头的），并返删除后的字符串。"><a href="#24、lstrip-chars-删除指定的字符（只能是开头的），并返删除后的字符串。" class="headerlink" title="24、lstrip([chars]) 删除指定的字符（只能是开头的），并返删除后的字符串。"></a>24、lstrip([chars]) 删除指定的字符（只能是开头的），并返删除后的字符串。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">test</span> = <span class="string">'python is a good language'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">python is a good language</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.lstrip())</span><br><span class="line">python is a good language</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.lstrip(<span class="string">'t'</span>))</span><br><span class="line">python is a good language</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.lstrip(<span class="string">'p'</span>))</span><br><span class="line">ython is a good language</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="25、rstrip-与上面相反。"><a href="#25、rstrip-与上面相反。" class="headerlink" title="25、rstrip() 与上面相反。"></a>25、rstrip() 与上面相反。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">python is a good language</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rstrip())</span><br><span class="line">python is a good language</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rstrip(eg))</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">NameError: name <span class="string">'eg'</span> is not defined</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rstrip(e))</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">NameError: name <span class="string">'e'</span> is not defined</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rstrip(<span class="string">'eg'</span>))</span><br><span class="line">python is a good langua</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rstrip(<span class="string">'g'</span>))</span><br><span class="line">python is a good language</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="26、rindex-str-i-j-从目标字符串中搜索指定的字符，返回该下标，如果没找到则会报错。"><a href="#26、rindex-str-i-j-从目标字符串中搜索指定的字符，返回该下标，如果没找到则会报错。" class="headerlink" title="26、rindex(str[,i [,j]]) 从目标字符串中搜索指定的字符，返回该下标，如果没找到则会报错。"></a>26、rindex(str[,i [,j]]) 从目标字符串中搜索指定的字符，返回该下标，如果没找到则会报错。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">python is a good language</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rindex(<span class="string">'p'</span>,0,2))</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rindex(<span class="string">'is'</span>,0,2))</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">ValueError: substring not found</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(test.rindex(<span class="string">'is'</span>,0,10))</span><br><span class="line">7</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="27、len-返回目标字符串的长度。"><a href="#27、len-返回目标字符串的长度。" class="headerlink" title="27、len() 返回目标字符串的长度。"></a>27、len() 返回目标字符串的长度。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(<span class="built_in">test</span>)</span><br><span class="line">python is a good language</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">print</span>(len(<span class="built_in">test</span>))</span><br><span class="line">25</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>就到这里吧，后面在遇到会整理到这块儿。</p>
+<p>总结：感觉好多方法与js类似，也有很多方法赶脚没啥用，整体来说还不错。。。<br>吃饭吃饭。<br>饿死了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.slomoo.cn/5fea1e5a/" data-id="cjxkbxse2000qiwux7z1p9vci" class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串/">字符串</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+    
+  <nav class="article-nav">
+    
+    
+      <a href="/9f07ae5c/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">Python数据类型</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+    
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: 'aa70a6221e972c349365',
+      clientSecret: '67e2948a10944a35927069b90e53a9f957d37c95',
+      repo: 'gitalk',
+      owner: 'slomoo',
+      admin: ['slomoo'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+  
+
+</article>
+
+
+
+</section>
+  <footer class="footer">
+  
+  <div class="outer">
+    <ul align="center" class="list-inline">
+
+      <li>&copy;  2017- 2019 Slomoo Blogs</li>
+      <li>Author:  <a href="https://blog.slomoo.cn/">张喜明</a></li>
+      <li>Email：slomoo@aliyun.com </li>
+      
+      <br>
+
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        Total <span id="busuanzi_value_site_pv"></span> views.
+      &nbsp&nbsp&nbsp
+      
+        您是第<span id="busuanzi_value_site_uv"></span>位到访小伙伴
+
+      <br>
+
+      <span id="sitetime"></span>
+      <script language="javascript">
+        function siteTime(){
+          window.setTimeout("siteTime()", 1000);
+          var seconds = 1000;
+          var minutes = seconds * 60;
+          var hours = minutes * 60;
+          var days = hours * 24;
+          var years = days * 365;
+          var today = new Date();
+          var todayYear = today.getFullYear();
+          var todayMonth = today.getMonth()+1;
+          var todayDate = today.getDate();
+          var todayHour = today.getHours();
+          var todayMinute = today.getMinutes();
+          var todaySecond = today.getSeconds();
+          /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+          year - 作为date对象的年份，为4位年份值
+          month - 0-11之间的整数，做为date对象的月份
+          day - 1-31之间的整数，做为date对象的天数
+          hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+          minutes - 0-59之间的整数，做为date对象的分钟数
+          seconds - 0-59之间的整数，做为date对象的秒数
+          microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+          var t1 = Date.UTC(2018,02,13,15,00,00); //北京时间2017-2-13 00:00:00
+          var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+          var diff = t2-t1;
+          var diffYears = Math.floor(diff/years);
+          var diffDays = Math.floor((diff/days)-diffYears*365);
+          var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+          var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+          var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+          document.getElementById("sitetime").innerHTML=" 网站已运行"+diffYears+" 年 "+ diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+        }
+        siteTime();
+      </script>
+
+      <!--
+      <li><a href="/">张喜明</a></li>
+      -->
+    </ul>
+  </div>
+</footer>
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="//slomoo.oss-cn-beijing.aliyuncs.com/images/hexo.svg?v%20=%202019062100000" alt="Slomoo Blogs"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/tags">标签</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">图册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">关注我</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+      <li class="nav-item">
+          <div class="totop" id="totop">
+    <i class="fe fe-rocket"></i>
+</div>
+      </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+
+<style>
+    #aplayer {
+        width: 50%;
+        margin: 0 auto;
+    }
+</style>
+
+<link rel="stylesheet" href="https://slomoo.oss-cn-beijing.aliyuncs.com/assets/css/APlayer.min.css">
+<div id="aplayer"></div>
+<script src="https://slomoo.oss-cn-beijing.aliyuncs.com/assets/js/APlayer.min.js"></script>
+<script>
+const app = new APlayer({
+    container: document.getElementById('aplayer'),
+    mini: false, //迷你模式
+    autoplay: false, //自动播放
+    theme: '#FADFA3', //主题色
+    loop: 'all', //音频循环播放, 可选值: 'all'全部循环, 'one'单曲循环, 'none'不循环
+    order: 'list', //音频循环顺序, 可选值: 'list'列表循环, 'random'随机循环
+    preload: 'auto', //预加载，可选值: 'none', 'metadata', 'auto'
+    volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+    mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+    listFolded: false, //列表默认折叠
+    listMaxHeight: 0, //列表最大高度
+    lrcType: 0, //歌词传递方式
+    fixed: false, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
+    audio: [
+      {
+          name: '打上花火',                          <!-- 歌曲名称-->
+          artist: '米津玄師',                        <!-- 歌曲作者-->
+          url: 'https://slomoo.oss-cn-beijing.aliyuncs.com/videos/%E6%89%93%E4%B8%8A%E8%8A%B1%E7%81%AB.mp3',      <!-- 歌曲路径-->
+          cover: 'https://slomoo.oss-cn-beijing.aliyuncs.com/images/%E6%89%93%E4%B8%8A%E8%8A%B1%E7%81%AB.png',  <!-- 歌曲封面图片-->
+          theme: '#46718b'                        <!-- 选中歌曲的主题-->
+      },
+      {
+          name: 'Lemon',                          <!-- 歌曲名称-->
+          artist: '米津玄師',                        <!-- 歌曲作者-->
+          url: 'https://slomoo.oss-cn-beijing.aliyuncs.com/videos/Lemon.mp3',      <!-- 歌曲路径-->
+          cover: 'https://slomoo.oss-cn-beijing.aliyuncs.com/images/lemon.png',  <!-- 歌曲封面图片-->
+          theme: '#46718b'                        <!-- 选中歌曲的主题-->
+      }
+    ]
+});
+</script>
+</aside>
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/jquery-2.0.3.min.js?v%20=%202019062100000"></script>
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/lazyload.min.js?v%20=%202019062100000"></script>
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/busuanzi-2.3.pure.min.js?v%20=%202019062100000"></script>
+
+
+  <script src="//slomoo.oss-cn-beijing.aliyuncs.com/fancybox/jquery.fancybox.min.js?v%20=%202019062100000"></script>
+
+
+
+  <script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/search.js?v%20=%202019062100000"></script>
+
+
+<script src="//slomoo.oss-cn-beijing.aliyuncs.com/js/ocean.js?v%20=%202019062100000"></script>
+
+</body>
+</html>
